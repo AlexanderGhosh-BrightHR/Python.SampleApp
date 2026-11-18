@@ -2,6 +2,43 @@
 name = "python.sampleapp"
 version = "1.0.0"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "ruff>=0.17.5",
+]
 
+[tool.ruff]
+line-length = 79
+indent-width = 2
 
+[tool.ruff.lint]
+extend-select = [
+    "E501",
+    "UP",
+    "D",
+    "RUF100",
+    "I"
+]
+ignore = [
+    "D203",
+    "D206",
+    "D300",
+    "I"
+]
+
+[tool.ruff.lint.isort]
+force-single-line = false
+force-wrap-aliases = false
+lines-after-imports = -1
+lines-between-types = 0
+split-on-trailing-comma = true
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+line-ending = "cr-lf"
+docstring-code-format = true
+docstring-code-line-length = 75
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

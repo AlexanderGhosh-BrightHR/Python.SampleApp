@@ -1,4 +1,5 @@
 def main():
+    """The main function."""
     print("Hello World")
 
 if __name__ == '__main__':
